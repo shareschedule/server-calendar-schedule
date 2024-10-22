@@ -4,6 +4,7 @@ import java.time.LocalDateTime
 
 class Calendar(
     val id: Long? = null,
+    val userId: Long,
     val isPublic: Boolean = false,
     val title: String,
     val content: String? =null,

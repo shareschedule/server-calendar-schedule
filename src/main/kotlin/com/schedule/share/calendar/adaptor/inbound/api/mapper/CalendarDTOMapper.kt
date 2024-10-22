@@ -6,20 +6,23 @@ import com.schedule.share.calendar.application.service.calendar.vo.CalendarVO
 
 fun CalendarRequestDTO.Calendar.toVO(
     createdBy: Long,
-    image: ByteArray
+    image: ByteArray,
+    userId: Long
 ): CalendarVO.Save =
     CalendarVO.Save(
         isPublic = isPublic,
         title = title,
         content = content,
         image = image,
-        createdBy = createdBy
+        createdBy = createdBy,
+        userId = userId
     )
 
 
 fun CalendarVO.Calendar.toResponse(): CalendarResponseDTO.Response =
     CalendarResponseDTO.Response(
         id = id!!,
+        userId = userId,
         isPublic = isPublic,
         title = title,
         content = content,

@@ -9,6 +9,7 @@ fun CalendarVO.Save.toDomain(
 ): Calendar =
     Calendar(
         id = id,
+        userId = userId,
         isPublic = isPublic,
         title = title,
         createdBy = createdBy,
@@ -19,6 +20,7 @@ fun CalendarVO.Save.toDomain(
 fun CalendarEntity.toDomain(): Calendar =
     Calendar(
         id = id,
+        userId = userId,
         isPublic = isPublic,
         title = title,
         content = content,
@@ -32,6 +34,7 @@ fun CalendarEntity.toDomain(): Calendar =
 fun Calendar.toEntity(): CalendarEntity =
     CalendarEntity(
         id = id,
+        userId = userId,
         isPublic = isPublic,
         title = title,
         content = content,
@@ -43,6 +46,7 @@ fun Calendar.toEntity(): CalendarEntity =
 fun Calendar.toVO(): CalendarVO.Calendar =
     CalendarVO.Calendar(
         id = id,
+        userId = userId,
         isPublic = isPublic,
         title = title,
         content = content,

@@ -12,6 +12,7 @@ import java.time.LocalDateTime
 @EntityListeners(AuditingEntityListener::class)
 open class CalendarEntity(
     id: Long? = null,
+    userId: Long,
     isPublic: Boolean = false,
     title: String,
     content: String? = null,
@@ -24,6 +25,9 @@ open class CalendarEntity(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     open var id: Long? = id
+        protected set
+
+    open var userId: Long = userId
         protected set
 
     open var isPublic: Boolean = isPublic

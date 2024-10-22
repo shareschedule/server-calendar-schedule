@@ -6,6 +6,7 @@ class CalendarResponseDTO {
 
     data class Response(
         val id: Long? = null,
+        val userId: Long,
         val isPublic: Boolean = false,
         val title: String,
         val content: String? = null,

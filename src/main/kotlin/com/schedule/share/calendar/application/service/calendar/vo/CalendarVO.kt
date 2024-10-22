@@ -6,6 +6,7 @@ class CalendarVO {
 
     data class Calendar(
         val id: Long? = null,
+        val userId: Long,
         val isPublic: Boolean = false,
         val title: String,
         val content: String? = null,
@@ -18,6 +19,7 @@ class CalendarVO {
 
     data class Save(
         val isPublic: Boolean = false,
+        val userId: Long,
         val title: String,
         val content: String,
         val image: ByteArray? = null,
